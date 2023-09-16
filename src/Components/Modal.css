@@ -1,0 +1,29 @@
+.Overlay {
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    right: auto;
+    bottom: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal {
+    height: 10rem;
+    width: 15rem;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    right: auto;
+    bottom: auto;
+    outline: none;
+}
+
+.txt {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-left: 5px;
+    text-shadow: 10px 10px 10px black;
+}
