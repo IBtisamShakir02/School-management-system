@@ -10,7 +10,7 @@
 }
 
 .Modal {
-    height: 27rem;
+    height: 18rem;
     width: 18rem;
     position: absolute;
     top: 50%;
@@ -30,11 +30,13 @@
     margin-left: 5px;
     text-shadow: 10px 10px 10px black;
 }
-.Div{
+
+.Div {
     height: 5rem;
-    width:18rem;
+    width: 18rem;
     display: flex;
 }
-.icon{
+
+.icon {
     margin-top: 1.5rem;
 }
