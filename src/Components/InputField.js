@@ -5,7 +5,7 @@ const InputField = (props) => {
     <>
       <div className="inputBox">
         <span>{props.lable}</span>
-        <input type={props.type} required="required"  /> 
+        <input type={props.type} required="required" />
       </div>
     </>
   );

@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* !!!!!!!!!!!!! utility  classes !!!!!!!!!!!!!!!!!!!!!! */
+
+.container {
+    width: 100%;
+    align-self: center;
+    height: 8%;
+    background-color: rgb(39, 165, 88);
+}
+
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+body{
+    background-color: rgb(187, 207, 233);
+}

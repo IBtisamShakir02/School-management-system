@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.backgroundSI {
+    height: 100vh;
+    width: 100%;
+    background-image: url('/src/Images/bac.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerDivSI {
+    height: 85vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 0;
+}
+
+.Logo {
+    height: 20%;
+    width: 28%;
+    background-color: #3d4a45;
+    align-self: baseline;
+    margin-left: 10%;
+    background-image: url('/src//Images/SC-Logo.png');
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-size: cover;
+    border-radius: 0.5rem;
+    padding: 3px;
+    z-index: 999;
+}
+
+.outerBoxSI {
+    height: 60%;
+    width: 25%;
+    border: 3px solid white;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtSI {
+    color: white;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin-left: -3%;
+    text-shadow: 5px 5px 5px black;
+    padding: 1rem;
+}
+
+.DivSI {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}

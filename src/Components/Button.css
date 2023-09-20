@@ -1,12 +1,16 @@
-.btn{
+.btn {
     color: white;
-    background-color: rgb(39, 165, 88);
     outline: none;
     height: 2rem;
-    width:7.5rem;
-    padding:5px;
+    width: 7.5rem;
+    padding: 5px;
     border-radius: 0.2rem;
     border: none;
-   text-shadow: 5px 5px 10px black;
-   margin: 5px;
+    text-shadow: 5px 5px 10px black;
+    margin: 1rem, 5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(196, 196, 223);
 }
