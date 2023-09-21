@@ -23,13 +23,12 @@ const Home = () => {
           <div className="btn">
             <Button
               go={() => gotoSignIn()}
-              color="rgb(39, 165, 88)"
+              color="#04213F"
               title="LogOut"
             ></Button>
           </div>
         </nav>
       </header>
-      <body></body>
     </>
   );
 };

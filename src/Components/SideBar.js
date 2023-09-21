@@ -10,6 +10,7 @@ import {
 import { MdContactPage } from "react-icons/md";
 import { IoMdSettings, IoIosBook } from "react-icons/io";
 import { BiSolidMessageRoundedDetail } from "react-icons/bi";
+import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import "./SideBar.css";
 import { useState } from "react";
@@ -19,62 +20,63 @@ const SideBar = ({ children }) => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  const size = ["20px"];
   const menuItems = [
     {
       path: "",
-      name: "Students Records",
-      icon: <FaUserGraduate />,
+      name: "Student Records",
+      icon: <FaUserGraduate size={size} />,
     },
     {
       path: "",
-      name: "Reports",
-      icon: <MdContactPage />,
+      name: "Student Reports",
+      icon: <MdContactPage size={size} />,
     },
     {
       path: "",
-      name: "Fee",
-      icon: <MdContactPage />,
+      name: "Student Fee Reports",
+      icon: <FaMoneyBillTrendUp size={size} />,
     },
     {
       path: "",
       name: "Examinations",
-      icon: <IoIosBook />,
+      icon: <IoIosBook size={size} />,
     },
     {
       path: "",
-      name: "Staff",
-      icon: <FaUsers />,
+      name: "Staff Records",
+      icon: <FaUsers size={size} />,
     },
     {
       path: " ",
       name: "Transport",
-      icon: <FaBusAlt />,
+      icon: <FaBusAlt size={size} />,
     },
     {
       path: " ",
       name: "Finance",
-      icon: <FaCoins />,
+      icon: <FaCoins size={size} />,
     },
     {
       path: "",
       name: "Settings",
-      icon: <IoMdSettings />,
+      icon: <IoMdSettings size={size} />,
     },
     {
       path: "",
       name: "Utilities",
-      icon: <FaTools />,
+      icon: <FaTools size={size} />,
     },
     {
       path: "",
       name: "Messaging",
-      icon: <BiSolidMessageRoundedDetail />,
+      icon: <BiSolidMessageRoundedDetail size={size} />,
     },
   ];
   return (
     <>
       <div className="cont">
-        <div style={{ width: isOpen ? "300px" : "60px" }} className="sidebar">
+        <div style={{ width: isOpen ? "230px" : "60px" }} className="sidebar">
           <div className="top-section">
             <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
               SMS
@@ -87,14 +89,14 @@ const SideBar = ({ children }) => {
             </div>
           </div>
           {menuItems.map((items, index) => (
-            <NavLink
-              to={items.path}
-              key={index}
-              className="link"
-              activeclassName="active"
-            >
+            <NavLink to={items.path} key={index} className="link">
               <div className="icon">{items.icon}</div>
-              <div className="link_txt">{items.name}</div>
+              <div
+                style={{ display: isOpen ? "" : "none" }}
+                className="link_txt"
+              >
+                {items.name}
+              </div>
             </NavLink>
           ))}
         </div>
