@@ -20,14 +20,11 @@ const SignUp = (props) => {
     navigate("/SignUp");
   };
   const handleNavigationSignIn = () => {
-    const data={
+    const data = {
       email: signInData.email,
       password: signInData.password,
-    }
-    if (
-      data.email !== "" &&
-      data.password !== ""
-    ) {
+    };
+    if (data.email !== "" && data.password !== "") {
       fetch(urlsignin, {
         method: "POST",
         headers: {
@@ -35,22 +32,25 @@ const SignUp = (props) => {
           "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify(data),
-      }).then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          throw new Error("Login failed"); 
-        }
-      }).then((userData) => {
-        if (userData && userData.token) {
-          navigate("/Home");
-        } else {
-          throw new Error("Invalid response data");
-        }
-      }).catch((error) => {
-        console.error("Error:", error);
-        alert("Login failed. Please try again.");
-      });
+      })
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            throw new Error("Login failed");
+          }
+        })
+        .then((userData) => {
+          if (userData && userData.token) {
+            navigate("/Home");
+          } else {
+            throw new Error("Invalid response data");
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Login failed. Please try again.");
+        });
     } else {
       alert("Please Enter Data");
     }
