@@ -75,19 +75,18 @@ const SideBar = ({ children }) => {
   ];
   return (
     <>
+      <div className="navbar">
+        <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
+          S-M-S
+        </h1>{" "}
+        <div style={{ marginLeft: isOpen ? "100px" : "16px" }} className="bars">
+          <FaBars onClick={toggle} />
+        </div>
+        <h2 className="middle-txt">SafeCare</h2>
+      </div>
       <div className="cont">
-        <div style={{ width: isOpen ? "230px" : "60px" }} className="sidebar">
-          <div className="top-section">
-            <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
-              SMS
-            </h1>
-            <div
-              style={{ marginLeft: isOpen ? "120px" : "0" }}
-              className="bars"
-            >
-              <FaBars onClick={toggle} />
-            </div>
-          </div>
+        <div style={{ width: isOpen ? "250px" : "60px" }} className="sidebar">
+          <div className="top-section"></div>
           {menuItems.map((items, index) => (
             <NavLink to={items.path} key={index} className="link">
               <div className="icon">{items.icon}</div>

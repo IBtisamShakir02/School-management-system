@@ -1,0 +1,9 @@
+.card-outer-container{
+    height: 8rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}

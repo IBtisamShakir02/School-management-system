@@ -4,32 +4,31 @@
 
 main {
     width: 100%;
-    /* padding: 10px; */
 }
 
 .sidebar {
     background: #04213F;
     color: white;
-    height: 100vh;
+    height: 93vh;
     width: 300px;
+    z-index: 810;
 }
 
 .top-section {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    padding: 20px 15px;
+    padding: 8px 15px;
 }
 
 .logo {
     font-size: 25px;
     font-family: sans-serif;
+    margin-left: 15px;
 }
 
 .bars {
-    display: flex;
     font-size: 20px;
-    margin-left: 120px;
+    margin-left: 10%;
 }
 
 .link {
@@ -46,8 +45,20 @@ main {
     color: black;
 }
 
-/* <==========LINK SIZE CHANGE ========> */
-/* .icon, .link_txt{
-    font-size: 17px;
-    size: 55px;
-} */
+.navbar {
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(39, 165, 88);
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.middle-txt {
+    text-align: center;
+    margin-left: 30px;
+    font-size: 25px;
+    font-family: sans-serif;
+}

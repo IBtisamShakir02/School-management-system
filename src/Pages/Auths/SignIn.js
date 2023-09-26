@@ -5,6 +5,7 @@ import InputField from "../../Components/InputField";
 import Button from "../../Components/Button";
 import { MdEmail } from "react-icons/md";
 import { MdLock } from "react-icons/md";
+import img from './SC-Logo.png'
 import { useNavigate } from "react-router-dom";
 const SignUp = (props) => {
   // <=======DECLEARATIONS======>
@@ -101,7 +102,9 @@ const SignUp = (props) => {
               />
             </div>
           </div>
-          <div className="Logo"></div>
+          <div className="Logo">
+          <img src={img}  alt="" />
+          </div>
         </div>
       </div>
     </>
