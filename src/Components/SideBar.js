@@ -14,6 +14,7 @@ import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import "./SideBar.css";
 import { useState } from "react";
+import imglogo from "../Pages/Auths/SC-Logo.png";
 
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,23 +77,34 @@ const SideBar = ({ children }) => {
   return (
     <>
       <div className="navbar">
-        <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
-          S-M-S
-        </h1>{" "}
-        <div style={{ marginLeft: isOpen ? "100px" : "16px" }} className="bars">
-          <FaBars onClick={toggle} />
+        <div
+          style={{ display: isOpen ? "flex" : "none" }}
+          className="h-12 w-[11%] flex items-center justify-center bg-green-300"
+        >
+          {/* <h1 className=" font-popins text-[15px] font-extrabold text-center">
+            SafeCare-School-System
+          </h1> */}
+          <img src={imglogo} alt="" className="h-12 w-[96%]" />
         </div>
-        <h2 className="middle-txt">SafeCare</h2>
+        <div
+          onClick={toggle}
+          style={{ backgroundColor: isOpen ? "rgb(134, 239, 172)" : "#27A558" }}
+          className="bars h-12 w-12 flex justify-center items-center bg-green-300"
+        >
+          <FaBars style={{color:isOpen? "#04213F" : "white"}}  />
+        </div>
+        <div className="h-12 w-[9rem] flex justify-center items-center">
+          <h2 className="middle-txt font-popins">SafeCare</h2>
+        </div>
       </div>
       <div className="cont">
         <div style={{ width: isOpen ? "250px" : "60px" }} className="sidebar">
-          <div className="top-section"></div>
           {menuItems.map((items, index) => (
             <NavLink to={items.path} key={index} className="link">
               <div className="icon">{items.icon}</div>
               <div
                 style={{ display: isOpen ? "" : "none" }}
-                className="link_txt"
+                className="link_txt font-popins line-clamp-1"
               >
                 {items.name}
               </div>

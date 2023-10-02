@@ -4,8 +4,8 @@ const InputField = (props) => {
   return (
     <>
       <div className="inputBox">
-        <span>{props.lable}</span>
-        <input
+        <span className="font-popins" >{props.lable}</span>
+        <input className="font-popins"
           autoComplete="off"
           onChange={props.ch}
           id={props.Id}

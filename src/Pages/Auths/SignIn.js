@@ -5,7 +5,7 @@ import InputField from "../../Components/InputField";
 import Button from "../../Components/Button";
 import { MdEmail } from "react-icons/md";
 import { MdLock } from "react-icons/md";
-import img from './SC-Logo.png'
+import img from "./SC-Logo.png";
 import { useNavigate } from "react-router-dom";
 const SignUp = (props) => {
   // <=======DECLEARATIONS======>
@@ -67,7 +67,7 @@ const SignUp = (props) => {
       <div className="backgroundSI">
         <div className="innerDivSI">
           <div className="outerBoxSI">
-            <h2 className="txtSI">{props.lable}</h2>
+            <h2 className="txtSI font-popins">{props.lable}</h2>
             <div className="DivSI">
               <InputField
                 ch={(e) => handleChangeSignIn(e)}
@@ -103,7 +103,7 @@ const SignUp = (props) => {
             </div>
           </div>
           <div className="Logo">
-          <img src={img}  alt="" />
+            <img src={img} alt="" />
           </div>
         </div>
       </div>

@@ -73,7 +73,7 @@ const SignUp = (props) => {
       <div className="background">
         <div className="innerDiv">
           <div className="outerBox">
-            <h2 className="txt">{props.lable}</h2>
+            <h2 className="txt font-popins">{props.lable}</h2>
             <div className="Div">
               <InputField
                 ch={(e) => handleChange(e)}
