@@ -11,36 +11,65 @@ import idcard from "../Images/idcard.png";
 import letter from "../Images/letter.png";
 import student from "../Images/student.png";
 import classs from "../Images/class.png";
+import addbus from "../Images/addbus.png";
 import phones from "../Images/phones.png";
 import notdoc from "../Images/notdoc.png";
+import excel from "../Images/excel.png";
 import studentleft from "../Images/studentleft.png";
 import reportAdd from "../Images/reportAdd.png";
 import yearly from "../Images/yearly.png";
 import house from "../Images/house.png";
+import expenserepo from "../Images/expenserepo.png";
+import chartofacc from "../Images/chartofacc.png";
+import receiptvoucher from "../Images/receiptvoucher.png";
 import absent from "../Images/absent.png";
+import profitandloss from "../Images/profitandloss.png";
+import cashbook from "../Images/cashbook.png";
+import settings from "../Images/settings.png";
+import ledgerdetails from "../Images/ledgerdetails.png";
+import attendancestaff from "../Images/attendancestaff.png";
 import infocheck from "../Images/infocheck.png";
+import verify from "../Images/verify.png";
+import smssetting from "../Images/smssetting.png";
+import accountbalance from "../Images/accountbalance.png";
+import journalvoucher from "../Images/journalvoucher.png";
 import summary from "../Images/summary.png";
+import editareas from "../Images/editareas.png";
 import dailyattendance from "../Images/dailyattendance.png";
 import attendanceReport from "../Images/attendanceReport.png";
 import siblings from "../Images/siblings.png";
+import balancesheet from "../Images/balancesheet.png";
 import classwise from "../Images/classwise.png";
+import vouchermoney from "../Images/vouchermoney.png";
 import Ledger from "../Images/Ledger.png";
+import changepass from "../Images/changepass.png";
+import userss from "../Images/userss.png";
+import addeditclass from "../Images/addeditclass.png";
+import trialbalance from "../Images/trialbalance.png";
+import absentstaff from "../Images/absentstaff.png";
+import addaccount from "../Images/addaccount.png";
 import bus from "../Images/bus.png";
+import employeereport from "../Images/employeereport.png";
 import receivings from "../Images/receivings.png";
 import promoteclass from "../Images/promoteclass.png";
+import employeephone from "../Images/employeephone.png";
 import marksheet from "../Images/marksheet.png";
 import monthlym from "../Images/monthlym.png";
+import backup from "../Images/backup.png";
+import sms from "../Images/sms.png";
 import classwent from "../Images/classwent.png";
 import addexam from "../Images/addexam.png";
 import monthlybills from "../Images/monthlybills.png";
 import billrepo from "../Images/billrepo.png";
 import balance from "../Images/balance.png";
 import print from "../Images/print.png";
+import staffsalary from "../Images/staffsalary.png";
 import billsdone from "../Images/billsdone.png";
 import previousexams from "../Images/previousexams.png";
 import resultenter from "../Images/resultenter.png";
 import resultentry from "../Images/resultentry.png";
 import comparison from "../Images/comparison.png";
+import staffprofile from "../Images/staffprofile.png";
 import examsubject from "../Images/examsubject.png";
 import Card from "../Components/Card";
 function Home() {
@@ -59,7 +88,7 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl  justify-evenly  ">
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl   ">
             <Card imag={admission} txt="Admission Form" />
             <Card imag={list} txt="Students List" />
             <Card imag={certificate} txt="Leaving Certificate " />
@@ -81,7 +110,7 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl  items-center justify-evenly ">
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl   ">
             <Card imag={student} txt="Current Students" />
             <Card imag={classs} txt="Class Wise Strength" />
             <Card imag={phones} txt="Student Contacts" />
@@ -107,7 +136,7 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl  ">
             <Card imag={Ledger} txt="Student Ledger" />
             <Card imag={receivings} txt="Fee Receivings" />
             <Card imag={bus} txt="Transport Fee Details" />
@@ -129,7 +158,7 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl  ">
             <Card imag={resultenter} txt="Result Entry" />
             <Card imag={resultentry} txt="Old Results" />
             <Card imag={addexam} txt="Add Examination" />
@@ -149,16 +178,13 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
-            <Card imag={admission} txt="Current Students" />
-            <Card imag={list} txt="Students List" />
-            <Card imag={certificate} txt="Leaving Certificate " />
-            <Card imag={bill} txt="Generate Fee Bill" />
-            <Card imag={recievedbill} txt="Fee Bill Recieving" />
-            <Card imag={latefee} txt="Generate Late Fee Fine" />
-            <Card imag={changefee} txt="Change Class Fee" />
-            <Card imag={idcard} txt="Print I.D Card" />
-            <Card imag={letter} txt="Transfer Letter" />
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl  ">
+            <Card imag={staffprofile} txt="Staff Profile" />
+            <Card imag={attendancestaff} txt="Staff Attendance" />
+            <Card imag={staffsalary} txt="Generate Staff Salary" />
+            <Card imag={employeereport} txt="Employee Report" />
+            <Card imag={employeephone} txt="Employee Phone" />
+            <Card imag={absentstaff} txt="Absent Staff" />
           </div>
         </div>
         {/* <=============Finance===========> */}
@@ -170,16 +196,19 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
-            <Card imag={admission} txt="Current Students" />
-            <Card imag={list} txt="Students List" />
-            <Card imag={certificate} txt="Leaving Certificate " />
-            <Card imag={bill} txt="Generate Fee Bill" />
-            <Card imag={recievedbill} txt="Fee Bill Recieving" />
-            <Card imag={latefee} txt="Generate Late Fee Fine" />
-            <Card imag={changefee} txt="Change Class Fee" />
-            <Card imag={idcard} txt="Print I.D Card" />
-            <Card imag={letter} txt="Transfer Letter" />
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl  ">
+            <Card imag={addaccount} txt="Add/Edit Account" />
+            <Card imag={cashbook} txt="Cash Book" />
+            <Card imag={vouchermoney} txt="Payment Voucher" />
+            <Card imag={receiptvoucher} txt="Receipt Voucher" />
+            <Card imag={journalvoucher} txt="Journal Voucher" />
+            <Card imag={chartofacc} txt="Chart of Accounts" />
+            <Card imag={ledgerdetails} txt="Ledger Details" />
+            <Card imag={accountbalance} txt="Account Balances" />
+            <Card imag={expenserepo} txt="Expense Report" />
+            <Card imag={trialbalance} txt="Trial Balance" />
+            <Card imag={profitandloss} txt="Profit & Loss" />
+            <Card imag={balancesheet} txt="Balance Sheet" />
           </div>
         </div>
         {/* <=============Settings===========> */}
@@ -191,16 +220,12 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
-            <Card imag={admission} txt="Current Students" />
-            <Card imag={list} txt="Students List" />
-            <Card imag={certificate} txt="Leaving Certificate " />
-            <Card imag={bill} txt="Generate Fee Bill" />
-            <Card imag={recievedbill} txt="Fee Bill Recieving" />
-            <Card imag={latefee} txt="Generate Late Fee Fine" />
-            <Card imag={changefee} txt="Change Class Fee" />
-            <Card imag={idcard} txt="Print I.D Card" />
-            <Card imag={letter} txt="Transfer Letter" />
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl  ">
+            <Card imag={addeditclass} txt="Add/Edit Classes" />
+            <Card imag={editareas} txt="Add/Edit Areas" />
+            <Card imag={settings} txt="Settings" />
+            <Card imag={addbus} txt="Add/Edit Vehicles" />
+            <Card imag={excel} txt="Import Excel" />
           </div>
         </div>
         {/* <=============Utilities===========> */}
@@ -212,16 +237,11 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
-            <Card imag={admission} txt="Current Students" />
-            <Card imag={list} txt="Students List" />
-            <Card imag={certificate} txt="Leaving Certificate " />
-            <Card imag={bill} txt="Generate Fee Bill" />
-            <Card imag={recievedbill} txt="Fee Bill Recieving" />
-            <Card imag={latefee} txt="Generate Late Fee Fine" />
-            <Card imag={changefee} txt="Change Class Fee" />
-            <Card imag={idcard} txt="Print I.D Card" />
-            <Card imag={letter} txt="Transfer Letter" />
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl  ">
+            <Card imag={userss} txt="Users" />
+            <Card imag={changepass} txt="Change Password" />
+            <Card imag={verify} txt="User Rights" />
+            <Card imag={backup} txt="BackUp Data" />
           </div>
         </div>
         {/* <=============Messaging===========> */}
@@ -233,16 +253,9 @@ function Home() {
               </h3>
             </div>
           </div>
-          <div className=" flex flex-wrap mx-10  border-2 border-solid border-primary-blue rounded-xl max-w-[95%]  items-center justify-evenly ">
-            <Card imag={admission} txt="Current Students" />
-            <Card imag={list} txt="Students List" />
-            <Card imag={certificate} txt="Leaving Certificate " />
-            <Card imag={bill} txt="Generate Fee Bill" />
-            <Card imag={recievedbill} txt="Fee Bill Recieving" />
-            <Card imag={latefee} txt="Generate Late Fee Fine" />
-            <Card imag={changefee} txt="Change Class Fee" />
-            <Card imag={idcard} txt="Print I.D Card" />
-            <Card imag={letter} txt="Transfer Letter" />
+          <div className=" main w-[97%] p-2  border-2 border-solid border-primary-blue rounded-xl ">
+            <Card imag={sms} txt="Write SMS" />
+            <Card imag={smssetting} txt="Message Server Settings" />
           </div>
         </div>
       </div>
