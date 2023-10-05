@@ -96,8 +96,8 @@ function Home() {
             <Card imag={bill} txt="Generate Fee Bill" />
             <Card imag={recievedbill} txt="Fee Bill Recieving" />
             <Card imag={latefee} txt="Generate Late Fee Fine" />
-            <Card imag={changefee} txt="Change Class Fee" />
             <Card imag={idcard} txt="Print I.D Card" />
+            <Card imag={changefee} txt="Change Class Fee" />
             <Card imag={letter} txt="Transfer Letter" />
           </div>
         </div>

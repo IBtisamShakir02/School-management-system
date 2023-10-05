@@ -1,0 +1,11 @@
+{
+    "editor.codeLensFontFamily": "'ubuntu'",
+    "editor.fontFamily": "'ubuntu'",
+    "editor.inlayHints.fontFamily": "'ubuntu'",
+    "notebook.output.fontFamily": "'ubuntu'",
+    "terminal.integrated.fontFamily": "monospace",
+    "chat.editor.fontFamily": "'ubuntu'",
+    "scm.inputFontFamily": "'ubuntu'",
+    "debug.console.fontFamily": "'ubuntu'",
+    "markdown.preview.fontFamily": "'ubuntu'"
+}
