@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const SignUp = (props) => {
   // <=======DECLEARATIONS======>
   const navigate = useNavigate();
-  const urlsignin = "http://localhost:4000/api/login";
+  const urlsignin = "http://localhost:6000/api/login";
   // <========STATES=============>
   const [signInData, setSignInData] = useState({
     email: "",
@@ -91,11 +91,15 @@ const SignUp = (props) => {
             <br />
             <div className="btn1">
               <Button
+                py="py-[0.5rem]"
+                px="px-5"
                 color="rgb(39, 165, 88)"
                 title="Sign-In"
                 go={() => handleNavigationSignIn()}
               />
               <Button
+                 py="py-[0.5rem]"
+                 px="px-5"
                 color="rgb(62, 96, 207)"
                 title="Sign-Up"
                 go={() => handleNavigationSignUp()}

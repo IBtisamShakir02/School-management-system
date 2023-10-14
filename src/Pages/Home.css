@@ -1,5 +1,5 @@
 .outer-container {
-    height:max-content;
+    height: max-content;
     max-width: 100%;
 }
 
@@ -10,11 +10,10 @@
 }
 
 .header-txt {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
 }
 
-.main{
+.main {
     overflow: hidden;
     margin: 0 auto;
     display: grid;

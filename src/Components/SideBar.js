@@ -18,6 +18,7 @@ import "./SideBar.css";
 import { useState } from "react";
 import imglogo from "../Pages/Auths/SC-Logo.png";
 import { useNavigate } from "react-router-dom";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +31,18 @@ const SideBar = ({ children }) => {
     }
   };
   const submenu = (menuItemIndex) => {
-    // setOpenMenu({
-    //   ...menuOpen,
-    //   [menuItemIndex]: !menuOpen[menuItemIndex],  
-    // });
     const isSubMenuOpen = menuOpen[menuItemIndex];
     const updatedMenuOpen = {};
     if (!isSubMenuOpen) {
       updatedMenuOpen[menuItemIndex] = true;
     }
     setOpenMenu(updatedMenuOpen);
+  };
+  const closeSidebar = () => {
+    if (isOpen) {
+      setIsOpen(false);
+      setOpenMenu({});
+    }
   };
   const size = ["20px"];
   const size2 = ["18px"];
@@ -61,7 +64,7 @@ const SideBar = ({ children }) => {
           icon: <CgShapeCircle size={size2} />,
         },
         {
-          path: "",
+          path: "/StudentList",
           name: "Student List",
           icon: <CgShapeCircle size={size2} />,
         },
@@ -474,19 +477,19 @@ const SideBar = ({ children }) => {
       <div className="navbar">
         <div
           style={{ display: isOpen ? "flex" : "none" }}
-          className="h-12 w-[11%] flex items-center justify-center bg-green-300"
+          className="h-12 w-[11%] flex items-center justify-center bg-white"
         >
           <img src={imglogo} alt="" className="h-12 w-[96%] animate-pulse" />
         </div>
         <div
           onClick={toggle}
-          style={{ backgroundColor: isOpen ? "rgb(134, 239, 172)" : "#27A558" }}
-          className="bars h-12 w-12 flex justify-center items-center bg-green-300"
+          style={{ backgroundColor: isOpen ? "white" : "#27A558" }}
+          className="bars h-12 w-12 flex justify-center items-center"
         >
           <FaBars style={{ color: isOpen ? "#04213F" : "white" }} />
         </div>
         <div className="h-12 w-[9rem] flex justify-center items-center">
-          <h2 className="middle-txt font-popins animate-pulse">SafeCare</h2>
+          <h2 className="middle-txt font-popins">SafeCare</h2>
         </div>
         <div
           className="w-[6rem] h-10 absolute end-0 transition ease-out duration-700 rounded-lg hover:bg-primary-blue mr-4 flex items-center justify-center"
@@ -505,7 +508,7 @@ const SideBar = ({ children }) => {
                 <div
                   style={{ width: isOpen ? "215px" : "55px" }}
                   onClick={() => submenu(index)}
-                  className=" flex mt-2 h-10 hover:bg-primary-green items-center"
+                  className={` flex mt-2 h-10 hover:bg-primary-green items-center ${hover?menuOpen:''}`}
                 >
                   <div className="flex justify-center items-center ml-2 icon h-6 w-8">
                     {menuItems.icon}
@@ -536,6 +539,7 @@ const SideBar = ({ children }) => {
                       to={submenu.path}
                       key={subIndex}
                       className="sub-link font-popins line-clamp-1"
+                      onClick={closeSidebar}
                     >
                       <div className="sub-icon">{submenu.icon}</div>
                       <div className="sub-txt font-popins text-sm line-clamp-1">
@@ -549,7 +553,7 @@ const SideBar = ({ children }) => {
           ))}
         </div>
 
-        <main>{children}</main>
+        <main closeSidebar={closeSidebar} className="bg-[#E2E8F0]">{children}</main>
       </div>
     </>
   );

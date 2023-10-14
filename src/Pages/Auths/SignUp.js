@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const SignUp = (props) => {
   // <====DECLARATIONS=====>
   const navigate = useNavigate();
-  const url = "http://localhost:4000/api/signup";
+  const url = "http://localhost:6000/api/signup";
   // <======STATES======>
   const [data, setData] = useState({
     name: "",
@@ -117,12 +117,15 @@ const SignUp = (props) => {
               />
               <MdLock className="icon" color="white" size={18} />
             </div>
-            <br />
-            <Button
-              go={() => goToSignIn()}
-              color="rgb(62, 96, 207)"
-              title="Sign-Up"
-            />
+            <div className="py-7 px-24 mt-3">
+              <Button
+                go={() => goToSignIn()}
+                color="rgb(62, 96, 207)"
+                title="Sign-Up"
+                py="py-[0.5rem]"
+                px="px-5"
+              />
+            </div>
           </div>
         </div>
       </div>

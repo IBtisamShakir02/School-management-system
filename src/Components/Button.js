@@ -1,12 +1,21 @@
-import React from 'react';
-import '../Components/Button.css'
+import React from "react";
+import "../Components/Button.css";
 
 const Button = (props) => {
-    return (
-        <>
-          <button onClick={props.go} style={{background: props.color}}  className='btn'>{props.title}</button>
-        </>
-    );
-}
+  const { py, px } = props;
+  return (
+    <>
+      <button
+        onClick={props.go}
+        style={{
+          background: props.color,
+        }}
+        className={`btn ${py} ${px} hover:text-slate-100`}
+      >
+        {props.title}
+      </button>
+    </>
+  );
+};
 
 export default Button;

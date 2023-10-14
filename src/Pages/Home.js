@@ -72,10 +72,10 @@ import comparison from "../Images/comparison.png";
 import staffprofile from "../Images/staffprofile.png";
 import examsubject from "../Images/examsubject.png";
 import Card from "../Components/Card";
-function Home() {
+function Home(props) {
   return (
     <>
-      <div className="outer-container bg-white">
+      <div className="outer-container bg-[#E2E8F0]">
         <div className="header-container shadow-md bg-primary-blue shadow-slate-500 mix-blend-normal">
           <h2 className="header-txt font-popins text-white">DashBoard</h2>
         </div>
@@ -90,7 +90,7 @@ function Home() {
           </div>
           <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl   ">
             <Card imag={admission} txt="Admission Form" />
-            <Card imag={list} txt="Students List" />
+            <Card path={'/StudentList'} imag={list} txt="Students List" />
             <Card imag={certificate} txt="Leaving Certificate " />
             <Card imag={dailyattendance} txt="Daily Attendance" />
             <Card imag={bill} txt="Generate Fee Bill" />
