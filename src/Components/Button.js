@@ -10,7 +10,7 @@ const Button = (props) => {
         style={{
           background: props.color,
         }}
-        className={`btn ${py} ${px} hover:text-slate-100`}
+        className={`btn ${py} ${px} font-popins hover:text-slate-100`}
       >
         {props.title}
       </button>

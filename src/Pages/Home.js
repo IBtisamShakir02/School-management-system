@@ -89,11 +89,11 @@ function Home(props) {
             </div>
           </div>
           <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl   ">
-            <Card imag={admission} txt="Admission Form" />
-            <Card path={'/StudentList'} imag={list} txt="Students List" />
+            <Card path={"/AdmissionFromComponent"} imag={admission} txt="Admission Form" />
+            <Card path={"/StudentList"} imag={list} txt="Students List" />
             <Card imag={certificate} txt="Leaving Certificate " />
             <Card imag={dailyattendance} txt="Daily Attendance" />
-            <Card imag={bill} txt="Generate Fee Bill" />
+            <Card path={"/FeeBills"} imag={bill} txt="Generate Fee Bill" />
             <Card imag={recievedbill} txt="Fee Bill Recieving" />
             <Card imag={latefee} txt="Generate Late Fee Fine" />
             <Card imag={idcard} txt="Print I.D Card" />

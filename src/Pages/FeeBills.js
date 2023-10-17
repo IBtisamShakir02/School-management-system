@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Components/Button";
 import DropDown from "../Components/DropDown";
 import SeacrhBar from "../Components/SeacrhBar";
 import { FaTrashAlt, FaEdit, FaPrint } from "react-icons/fa";
-import { useState, useEffect } from "react";
 import { FaSortAmountDownAlt, FaSort, FaSortAlphaUp } from "react-icons/fa";
-
-const StudentList = () => {
+import { useNavigate } from "react-router-dom";
+const FeeBills = () => {
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [sortedStudents, setSortedStudents] = useState([]);
   const [sortOrder, setSortOrder] = useState("asc");
@@ -85,9 +85,9 @@ const StudentList = () => {
     const newSortClass = sortClassOrder === "asc" ? "desc" : "asc";
     const sortedC = users.slice().sort((a, b) => {
       if (sortClassOrder === "asc") {
-        return a.Class.localeCompare(b.Class); // Sort A to Z
+        return a.Class.localeCompare(b.Class);
       } else {
-        return b.Class.localeCompare(a.Class); // Sort Z to A
+        return b.Class.localeCompare(a.Class);
       }
     });
     setSortClassOrder(newSortClass);
@@ -97,9 +97,9 @@ const StudentList = () => {
     const newSortSName = sortNameOrder === "asc" ? "desc" : "asc";
     const sortedN = users.slice().sort((a, b) => {
       if (sortNameOrder === "asc") {
-        return a.Student_Name.localeCompare(b.Student_Name); // Sort A to Z
+        return a.Student_Name.localeCompare(b.Student_Name);
       } else {
-        return b.Student_Name.localeCompare(a.Student_Name); // Sort Z to A
+        return b.Student_Name.localeCompare(a.Student_Name);
       }
     });
     setSortNameOrder(newSortSName);
@@ -122,77 +122,53 @@ const StudentList = () => {
     <>
       <div className="bg-[#E2E8F0] flex flex-col items-center h-screen max-w-[100%]">
         <div className="h-[3.5rem] w-[100%] pt-[1rem] pl-[1rem] shadow-md bg-primary-blue shadow-slate-500 mix-blend-normal">
-          <h2 className="font-popins text-[18px] text-white">Students</h2>
+          <h2 className="font-popins text-[18px] text-white">Fee Bills</h2>
         </div>
-        <div className=" w-[100%] h-[6rem] border-b grid grid-flow-row-dense grid-cols-3 grid-rows-3">
-          <div className="h-[6rem] flex  items-center justify-evenly w-[90%]">
+        <div className="h-[6rem] w-[100%] flex">
+          <div className="h-[6rem] flex-1 flex justify-evenly items-center">
             <Button
-              //   go={}
+              go={() => navigate("/FeeBillsStudents")}
               color="#27A558"
-              title="Add Student"
+              title="Create Bill For Student"
               py="py-[0.5rem]"
               px="px-5"
             />
-            <Button
-              //   go={}
+            <Button //   go={}
+              color="#27A558"
+              title="Create Bill For Class"
               py="py-[0.5rem]"
               px="px-5"
+            />
+            <Button //   go={}
               color="#27A558"
-              title="Excel Import"
+              title="Print Bill For Class"
+              py="py-[0.5rem]"
+              px="px-5"
             />
           </div>
-          <div className="h-[6rem] w-[90%] flex">
-            <div className="h-[6rem] w-[25%] flex items-center justify-center">
-              <h3 className="font-popins text-black">Catagory:</h3>
-            </div>
-            <div className="w-[75%] flex items-center pl-2">
-              <DropDown
-                selected={selectedStatus}
-                onSelect={(value) => setSelectedStatus(value)}
-                lable="Select Students"
-                categories={[
-                  "All Students",
-                  "Present Students",
-                  "Left students",
-                ]}
-              />
-            </div>
-          </div>
-          <div className="h-[6rem] w-[90%] flex items-center justify-evenly ">
-            <div className="h-[6rem] w-[15%] flex items-center justify-center">
-              <h3 className="font-popins text-black">Class:</h3>
-            </div>
-            <div className="h-[6rem] flex items-center justify-center">
-              <DropDown
-                lable="Select Class"
-                categories={[
-                  "All Classes",
-                  "Play Group",
-                  "Nursery",
-                  "KG",
-                  "One",
-                  "Two",
-                  "Three",
-                  "Four",
-                  "Five",
-                  "Six",
-                  "Seven",
-                  "Eight",
-                  "Nine",
-                  "Ten",
-                ]}
-                selected={selectedClass}
-                onSelect={(value) => setSelectedClass(value)}
-              />
-            </div>
-            <div className="h-[6rem] w-[35%] flex items-center justify-center">
-              <Button
-                title="Excel Export"
-                color="#27A558"
-                py="py-[0.5rem]"
-                px="px-5"
-              />
-            </div>
+          <div className="h-[6rem] flex-1 flex items-center justify-center">
+            <h3 className="font-popins text-black mr-3">Class:</h3>
+            <DropDown
+              lable="Select Class"
+              categories={[
+                "All Classes",
+                "Play Group",
+                "Nursery",
+                "KG",
+                "One",
+                "Two",
+                "Three",
+                "Four",
+                "Five",
+                "Six",
+                "Seven",
+                "Eight",
+                "Nine",
+                "Ten",
+              ]}
+              selected={selectedClass}
+              onSelect={(value) => setSelectedClass(value)}
+            />
           </div>
         </div>
         <div className="w-[95%] h-[4rem] rounded-lg border-b flex items-center justify-between bg-primary-blue">
@@ -212,50 +188,33 @@ const StudentList = () => {
             <SeacrhBar />
           </div>
         </div>
-        <div className="w-[95%] h-[2.5rem] mt-4 p-1 rounded-lg border-b flex items-center bg-primary-green">
+        <div className="w-[95%] h-[2.5rem] mt-4 p-1 rounded-lg border-b flex items-center justify-center bg-primary-green">
           <div className="h-[2rem] w-[12%] rounded-lg p-1">
             <h3 className="text-white font-popins">Action</h3>
           </div>
-          <div className="h-[2rem] w-[6%] flex items-center justify-evenly rounded-lg">
-            <FaSortAmountDownAlt className="text-white" />
-            <h3 className="text-white font-popins">S.No</h3>
+          <div className="h-[2rem] w-[15%] flex items-center justify-center rounded-lg">
+            <FaSortAmountDownAlt className="text-white mr-[0.30rem]" />
+            <h3 className="text-white font-popins"> Bill No</h3>
           </div>
-          <div
-            onClick={handleSortReg}
-            className="h-[2rem]  flex items-center justify-evenly w-[6%] rounded-lg "
-          >
+          <div className="h-[2rem]  flex items-center justify-center w-[15%] rounded-lg">
             <FaSort className="text-white hover:text-blue-700 duration-100 delay-100" />
-            <h3 className="text-white font-popins">Reg.No</h3>
+            <h3 className="text-white font-popins">Period</h3>
           </div>
-          <div
-            onClick={handleSortName}
-            className="h-[2rem] w-[15%] flex items-center justify-center rounded-lg"
-          >
+          <div className="h-[2rem] w-[15%] flex items-center justify-center rounded-lg">
             <FaSortAlphaUp className="text-white hover:text-blue-700 duration-100 delay-100 mr-[0.30rem]" />
-            <h3 className="text-white font-popins">Student Name</h3>
+            <h3 className="text-white font-popins">Reg.No</h3>
           </div>
           <div className="h-[2rem] w-[15%] flex items-center justify-center rounded-lg">
             <FaSortAlphaUp className="text-white mr-[0.30rem]" />
-            <h3 className="text-white font-popins">Father Name</h3>
+            <h3 className="text-white font-popins">Student Name</h3>
           </div>
           <div className="h-[2rem] w-[16%] flex items-center justify-center rounded-lg">
             <FaSortAlphaUp className="text-white mr-[0.30rem]" />
-            <h3 className="text-white font-popins">Contact Info</h3>
-          </div>
-          <div
-            onClick={handleSortClass}
-            className="h-[2rem] w-[10%] flex items-center justify-center rounded-lg"
-          >
-            <FaSort className="text-white hover:text-blue-700 duration-100 delay-100 mr-[0.30rem]" />
             <h3 className="text-white font-popins">Class</h3>
           </div>
-          <div className="h-[2rem] w-[10%] rounded-lg flex items-center justify-center">
-            <FaSort className="text-white mr-[0.30rem]" />
-            <h3 className="text-white font-popins">Net Fee</h3>
-          </div>
-          <div className="h-[2rem] w-[10%] rounded-lg flex items-center justify-center">
-            <FaSort className="text-white mr-[0.30rem]" />
-            <h3 className="text-white font-popins line-clamp-1">Status</h3>
+          <div className="h-[2rem] w-[11%] flex items-center justify-center rounded-lg">
+            <FaSort className="text-white hover:text-blue-700 duration-100 delay-100 mr-[0.25rem]" />
+            <h3 className="text-white font-popins">Bill Amount</h3>
           </div>
         </div>
         <div className="h-max mb-8 w-[95%] flex rounded-lg border border-primary-green">
@@ -282,29 +241,20 @@ const StudentList = () => {
                         <FaPrint color="lightgreen" />
                       </div>
                     </td>
-                    <td className="h-[1.5rem] w-[6%] text-center rounded-lg font-popins">
-                      {user.id}
+                    <td className="h-[1.5rem] w-[15%] text-center rounded-lg font-popins">
+                      {user.Admission_Date}
                     </td>
-                    <td className="h-[1.5rem] w-[6%] text-center rounded-lg font-popins">
+                    <td className="h-[1.5rem] w-[15%] text-center rounded-lg font-popins">
                       {user.Registration_No}
                     </td>
                     <td className="h-[1.5rem] w-[15%] text-center rounded-lg ont-popins">
                       {user.Student_Name}
-                    </td>
-                    <td className="h-[1.5rem] w-[15%] text-center rounded-lg font-popins">
-                      {user.contactInfo.Father_Name}
-                    </td>
-                    <td className="h-[1.5rem] w-[16%] text-center rounded-lg font-popins">
-                      {user.contactInfo.Father_Phone}
                     </td>
                     <td className="h-[1.5rem] w-[10%] text-center rounded-lg font-popins">
                       {user.Class}
                     </td>
                     <td className="h-[1.5rem] w-[10%] text-center rounded-lg font-popins">
                       {user.feeInfo.Net_Fee}
-                    </td>
-                    <td className="h-[1.5rem] w-[10%] text-center rounded-lg font-popins">
-                      {user.status}
                     </td>
                   </tr>
                 ))}
@@ -350,4 +300,4 @@ const StudentList = () => {
   );
 };
 
-export default StudentList;
+export default FeeBills;

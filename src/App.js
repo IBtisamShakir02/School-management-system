@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SideBar from "./Components/SideBar";
 import Home from "./Pages/Home";
 import StudentList from "./Pages/StudentList";
+import FeeBills from "./Pages/FeeBills";
+import FeeBillsStudents from "./Pages/FeeBillsStudents";
+import AdmissionFromComponent from "./Pages/AdmissionFromComponent";
 
 function App() {
   return (
@@ -17,6 +20,18 @@ function App() {
         <Route
           path="/StudentList"
           element={<WithSideBarPage page={<StudentList />} />}
+        />
+        <Route
+          path="/FeeBills"
+          element={<WithSideBarPage page={<FeeBills />} />}
+        />
+        <Route
+          path="/FeeBillsStudents"
+          element={<WithSideBarPage page={<FeeBillsStudents />} />}
+        />
+        <Route
+          path="/AdmissionFromComponent"
+          element={<WithSideBarPage page={<AdmissionFromComponent />} />}
         />
         <Route path="*" element={<Error />} />
       </Routes>

@@ -79,7 +79,7 @@ const SideBar = ({ children }) => {
           icon: <CgShapeCircle size={size2} />,
         },
         {
-          path: "",
+          path: "/FeeBills",
           name: "Generate Fee Bill",
           icon: <CgShapeCircle size={size2} />,
         },

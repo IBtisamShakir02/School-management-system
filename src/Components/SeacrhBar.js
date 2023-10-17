@@ -1,6 +1,6 @@
 import React from "react";
 import { ImSearch } from "react-icons/im";
-const SeacrhBar = () => {
+const SeacrhBar = (props) => {
   return (
     <div className="h-8 w-[70%] pl-1 bg-white rounded-[0.25rem] flex items-center">
       <input className="h-[90%] font-popins px-1 text-cente w-[90%] outline-none" />
