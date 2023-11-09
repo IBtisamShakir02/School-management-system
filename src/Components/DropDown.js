@@ -12,13 +12,13 @@ const DropDown = (props) => {
       <select
         value={selectedCategory}
         onChange={handleCategoryChange}
-        className="block w-full px-4 py-1 border outline-none rounded-[0.25rem] shadow-sm"
+        className={`block w-full px-4 py-1 border outline-none rounded-[0.25rem] ${props.bordr} shadow-sm ${props.txt} ${props.bgClr}`}
       >
-        <option value="" disabled>
+        <option className={`${props.optionBg}`} value="" disabled>
           {props.lable}
         </option>
         {catagories.map((category, index) => (
-          <option key={index} value={category}>
+          <option className={`${props.optionBg}`} key={index} value={category}>
             {category}
           </option>
         ))}

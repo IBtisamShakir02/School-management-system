@@ -508,7 +508,9 @@ const SideBar = ({ children }) => {
                 <div
                   style={{ width: isOpen ? "215px" : "55px" }}
                   onClick={() => submenu(index)}
-                  className={` flex mt-2 h-10 hover:bg-primary-green items-center ${hover?menuOpen:''}`}
+                  className={` flex mt-2 h-10 hover:bg-primary-green items-center ${
+                    hover ? menuOpen : ""
+                  }`}
                 >
                   <div className="flex justify-center items-center ml-2 icon h-6 w-8">
                     {menuItems.icon}
@@ -553,7 +555,9 @@ const SideBar = ({ children }) => {
           ))}
         </div>
 
-        <main closeSidebar={closeSidebar} className="bg-[#E2E8F0]">{children}</main>
+        <main closeSidebar={closeSidebar} className="bg-[#E2E8F0]">
+          {children}
+        </main>
       </div>
     </>
   );

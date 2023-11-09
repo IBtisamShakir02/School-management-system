@@ -108,7 +108,7 @@ function AdmissionFromComponent() {
     e.preventDefault();
 
     // Send the data to the backend using the fetch method
-    fetch("http://localhost:8000/api/studentAdmission", {
+    fetch("192.168.10.9:8000/api/studentAdmission", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

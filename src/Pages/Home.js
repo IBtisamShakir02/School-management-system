@@ -88,7 +88,7 @@ function Home(props) {
               </h3>
             </div>
           </div>
-          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl   ">
+          <div className=" main w-[97%] p-2  border-2 border-solid  border-primary-blue rounded-xl place-items-center md:place-items-center    ">
             <Card path={"/AdmissionFromComponent"} imag={admission} txt="Admission Form" />
             <Card path={"/StudentList"} imag={list} txt="Students List" />
             <Card imag={certificate} txt="Leaving Certificate " />

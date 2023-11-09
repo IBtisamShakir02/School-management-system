@@ -30,7 +30,7 @@ const StudentList = () => {
   const [selectedClass, setSelectedClass] = useState("All Classes");
 
   useEffect(() => {
-    fetch("http://192.168.10.22:8000/api/getAllUser")
+    fetch("http://192.168.10.9:8000/api/getAllUser")
       .then((response) => response.json())
       .then((data) => {
         let filteredData = data.filter((user) => {
@@ -54,7 +54,7 @@ const StudentList = () => {
       const userName = userToDelete.Student_Name;
       const registrationNo = userToDelete.Registration_No;
 
-      fetch(`http://192.168.10.22:8000/api/deleteUser/${id}`, {
+      fetch(`http://192.168.10.9:8000/api/deleteUser/${id}`, {
         method: "DELETE",
       })
         .then(() => {
@@ -148,6 +148,8 @@ const StudentList = () => {
             <div className="w-[75%] flex items-center pl-2">
               <DropDown
                 selected={selectedStatus}
+                txt="text-black"
+                bgClr="bg-white"
                 onSelect={(value) => setSelectedStatus(value)}
                 lable="Select Students"
                 categories={[
